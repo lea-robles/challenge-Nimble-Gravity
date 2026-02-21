@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Ejecutamos ambas peticiones en paralelo para ganar velocidad
+        // Se ejecuta ambas peticiones en paralelo para ganar velocidad
         const [resCand, resJobs] = await Promise.all([
           fetch(`https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net/api/candidate/get-by-email?email=${EMAIL}`),
           fetch(`https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net/api/jobs/get-list`)
@@ -35,10 +35,10 @@ function App() {
   }, []);
 
   const handleApply = async (jobId, url) => {
-    // 1. Validación de URL
+    // Validación de URL
     if (!url) return alert("Por favor, ingresa la URL de tu repositorio");
     
-    // 2. Validación de seguridad para evitar errores de 'null'
+    // Validación de seguridad para evitar errores de 'null'
     if (!candidate) return alert("Error: Datos del candidato no cargados");
 
     const payload = {
@@ -76,7 +76,6 @@ function App() {
       <Header />
       
       <div className="container">
-        {/* Solo mostramos la sección si tenemos los datos del candidato */}
         {candidate && (
           <WelcomeSection 
             firstName={candidate.firstName} 
