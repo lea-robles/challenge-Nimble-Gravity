@@ -1,0 +1,16 @@
+.main-header {
+  width: 100%;
+  background: linear-gradient(150deg, #4b2a73 0%, #2e1a47 50%, #1a0f29 100%);
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
