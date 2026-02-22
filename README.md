@@ -24,7 +24,7 @@ Arranqué con una estructura básica y decidí modificarla para que sea escalabl
 
 * **IA**: Utilice el asistente Gemini para ayudarme con el proyecto. Lo veo como una excelente herramienta en la que apoyarse, me fue muy util para recordar algunas cosas que necesitaba refrescar y asegurarme de no tener errores.
 
-* **Ajuste de Postulación**: AL momento del submit me encontré con un pequeño bloqueo en el envío de datos, debido a un campo faltante que la API requería. Lo solucioné analizando la respuesta detallada del servidor y ajustando el objeto de envío, logrando así que la postulación se complete correctamente.
+* **Ajuste de Postulación**: Al momento del submit me encontré con un pequeño bloqueo en el envío de datos, debido a un campo faltante que la API requería. Lo solucioné analizando la respuesta detallada del servidor y ajustando el objeto de envío, logrando así que la postulación se complete correctamente.
 
 
 
