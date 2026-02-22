@@ -33,38 +33,40 @@ function App() {
     };
     fetchData();
   }, []);
-
-  const handleApply = async (jobId, url) => {
-    // Validación de URL
+const handleApply = async (jobId, url) => {
     if (!url) return alert("Por favor, ingresa la URL de tu repositorio");
-    
-    // Validación de seguridad para evitar errores de 'null'
     if (!candidate) return alert("Error: Datos del candidato no cargados");
 
+    // Fuerzo String por error al intentar submit
     const payload = {
       uuid: candidate.uuid,
-      jobId: jobId,
-      candidateId: candidate.candidateId,
-      repoUrl: url
+      jobId: String(jobId),
+      candidateId: String(candidate.candidateId),
+      applicationId: candidate.applicationId, // Agregue este que es el que pide el error
+      repoUrl: url.trim()
     };
+
+    console.log("Enviando postulación exacta:", payload);
 
     try {
       const response = await fetch('https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net/api/candidate/apply-to-job', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json' 
+        },
         body: JSON.stringify(payload)
       });
 
-      // La API a veces devuelve un objeto con .ok o directamente el resultado
       const result = await response.json();
-      
-      if (response.ok || result.ok) {
+
+      if (response.ok && result.ok) {
         alert("¡Postulación enviada con éxito!");
       } else {
-        alert("Error: " + (result.message || "No se pudo enviar la postulación"));
+        console.error("Error de la API:", result);
+        alert("Error: " + (result.message || "Datos incorrectos o ya postulado"));
       }
     } catch (error) {
-      alert("Error de red: Intenta nuevamente.");
+      alert("Error de red. Verifica tu conexión.");
       console.error(error);
     }
   };
@@ -74,12 +76,12 @@ function App() {
   return (
     <div className="app-wrapper">
       <Header />
-      
+
       <div className="container">
         {candidate && (
-          <WelcomeSection 
-            firstName={candidate.firstName} 
-            lastName={candidate.lastName} 
+          <WelcomeSection
+            firstName={candidate.firstName}
+            lastName={candidate.lastName}
           />
         )}
 
