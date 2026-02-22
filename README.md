@@ -1,16 +1,33 @@
-# React + Vite
+# Mi solución para el Challenge de Nimble Gravity
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hola! Soy Leandro. Este es el resultado de mi trabajo para el desafío de Frontend. 
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+### El proceso
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Arranqué con una estructura básica y decidí modificarla para que sea escalable. Dividí la interfaz en componentes (Header, JobCard, Button) porque me parece clave mantener el código limpio y fácil de leer.
+
+
+
+### Lo que apliqué
+
+* **Tecnologías**: Desarrollé la aplicación utilizando **React** con **Vite**.
+
+* **Consumo de APIs**: Manejé peticiones asíncronas para traer mi perfil y las vacantes en paralelo.
+
+* **UI/UX**: Me enfoqué en utilizar colores similares a los de la empresa.
+
+* **Git**: Tuve que lidiar con algunos conflictos de ramas y versiones, pero logré dejar el repositorio ordenado.
+
+* **IA**: Utilice el asistente Gemini para ayudarme con el proyecto. Lo veo como una excelente herramienta en la que apoyarse, me fue muy util para recordar algunas cosas que necesitaba refrescar y asegurarme de no tener errores.
+
+
+
+### Cómo probarlo
+
+- Instalás dependencias con `npm install`
+
+- Corrés con `npm run dev`
