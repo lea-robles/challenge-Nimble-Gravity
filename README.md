@@ -2,7 +2,7 @@
 
 
 
-Hola! Soy Leandro. Este es el resultado de mi trabajo para el desafío de Frontend. 
+Hola! Soy Leandro. Este es el resultado de mi trabajo para el desafío.
 
 
 
